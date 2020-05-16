@@ -5,14 +5,14 @@ Authors@R: person('Ewen', 'Henderson', email = 'ewenhenderson@gmail.com', role =
 Description: Interactive web app for exploring grime music networks.
 License: MIT + file LICENSE
 Imports: 
-    golem,
-    shiny,
-    dplyr,
-    glue,
-    purrr,
-    shinyWidgets,
-    tidygraph,
-    visNetwork,
+    golem (>= 0.2.1),
+    shiny (>= 1.4.0),
+    dplyr (>= 0.8.0),
+    glue (>= 1.4.0),
+    purrr (>= 0.3.4),
+    shinyWidgets (>= 0.5.1),
+    tidygraph (>= 1.2.0),
+    visNetwork (>= 2.0.9),
     waiter
 Encoding: UTF-8
 LazyData: true

@@ -11,8 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 ![grimenet](man/figures/screenshot.png)
 
-*GRIMENET* is an app for exploring the social networks within \[UK
-Grime\](<https://en.wikipedia.org/wiki/Grime_(music_genre)> through
+*GRIMENET* is an app for exploring the social networks within [UK
+Grime](https://en.wikipedia.org/wiki/Grime_\(music_genre\)) through
 interactive network analysis.
 
 ## Use

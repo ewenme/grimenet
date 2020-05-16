@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 ![grimenet](man/figures/screenshot.png)
 
-*GRIMENET* is an app for exploring the social networks within [UK Grime](https://en.wikipedia.org/wiki/Grime_(music_genre) through interactive network analysis.
+*GRIMENET* is an app for exploring the social networks within [UK Grime](https://en.wikipedia.org/wiki/Grime_(music_genre)) through interactive network analysis.
 
 ## Use
 
