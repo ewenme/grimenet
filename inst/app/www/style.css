@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+h1 {
+  font-family: 'Bungee Inline', cursive;
+}
+
+body {
+  font-family: 'Pangolin', cursive;
+}
+
+#about_ui_1-about {
+  border:none;
+  background-color: #F5F5F5;
+}

@@ -1,0 +1,27 @@
+Package: grimenet
+Title: grimenet
+Version: 0.0.0.9000
+Authors@R: person('Ewen', 'Henderson', email = 'ewenhenderson@gmail.com', role = c('cre', 'aut'))
+Description: Interactive web app for exploring grime music networks.
+License: MIT + file LICENSE
+Imports: 
+    golem,
+    shiny,
+    dplyr,
+    glue,
+    purrr,
+    shinyWidgets,
+    tidygraph,
+    visNetwork,
+    waiter
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat,
+    processx,
+    jsonlite,
+    stringr,
+    tidyr
+Depends: 
+    R (>= 2.10)
