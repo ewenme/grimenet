@@ -89,7 +89,7 @@ mod_selections_server <- function(input, output, session, react_global){
     
     req(react_global$artist_id)
     
-    relations %>% 
+    grimenet::relations %>% 
       dplyr::filter(node_is_adjacent(react_global$artist_id, include_to = TRUE))
     
   })
@@ -99,7 +99,7 @@ mod_selections_server <- function(input, output, session, react_global){
 
     req(react_global$artist_data, react_global$artist_id, input$year)
     
-    relations %>%
+    grimenet::relations %>%
       activate(edges) %>%
       dplyr::filter(
         between(year, input$year[1], input$year[2]),
