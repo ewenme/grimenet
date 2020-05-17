@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
 
 h1 {
   font-family: 'Bungee Inline', cursive;
@@ -12,4 +13,13 @@ body {
 #about_ui_1-about {
   border:none;
   background-color: #F5F5F5;
+}
+
+.modal-body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+.modal-body > h3 {
+  font-weight: 700;
 }
