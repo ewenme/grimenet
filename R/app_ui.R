@@ -52,12 +52,12 @@ golem_add_external_resources <- function(){
     tags$meta(property="og:title", content="GRIMENET"),
     tags$meta(property="og:type", content="website"),
     tags$meta(property="og:url", content="https://apps.ewen.io/grimenet"),
-    tags$meta(property="og:image", content="https://apps.ewen.io/grimenet/www/grimenet.png"),
-    tags$meta(property="og:description", content="An app for exploring the social networks within UK Grime"),
+    tags$meta(property="og:image", content="https://apps.ewen.io/grimenet/www/grimenet-square.png"),
+    tags$meta(property="og:description", content="An app exploring social networks within UK Grime"),
     tags$meta(name="twitter:card", content="summary_large_image"),
     tags$meta(name="twitter:site", content="@ewen_"),
     tags$meta(name="twitter:title", content="GRIMENET"),
-    tags$meta(name="twitter:description", content="An app for exploring the social networks within UK Grime"),
+    tags$meta(name="twitter:description", content="An app exploring social networks within UK Grime"),
     tags$meta(name="twitter:image:src", content="https://apps.ewen.io/grimenet/www/grimenet.png")
   )
   
