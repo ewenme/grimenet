@@ -30,13 +30,13 @@ mod_network_server <- function(input, output, session, react_global){
     # only label selected artists
     data$nodes$label <- if_else(
       data$nodes$node_id %in% react_global$artist_id,
-      data$nodes$label, ""
+      data$nodes$name_clean, ""
     )
     
     # add tooltip
     data$nodes$title <- map_chr(data$nodes$id, function(x) {
       
-      relation_text <- map_chr(react_global$artist_name, function(y) {
+      relation_text <- map2_chr(react_global$artist_name, react_global$artist_name_clean, function(y, z) {
         
         if (x == y) return("")
         
@@ -52,7 +52,7 @@ mod_network_server <- function(input, output, session, react_global){
         )
         
         paste0(
-          "Appeared with ", y, " on ", 
+          "Appeared with ", z, " on ", 
           glue_collapse(unique(release_links), sep = ", ", last = " and "),
           "."
         )
