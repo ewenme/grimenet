@@ -3,12 +3,6 @@
 
 # grimenet
 
-<!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-<!-- badges: end -->
-
 ![grimenet](man/figures/screenshot.png)
 
 *GRIMENET* is an app for exploring the social networks within [UK
@@ -32,3 +26,7 @@ grimenet::run_app() # run!
 
 This work is heavily inspired by Karl Tryggvason’s
 [Discogsgrapher](https://github.com/Kalli/Discogsgrapher) project.
+
+## License
+
+[MIT](https://github.com/ewenme/grimenet/blob/master/LICENSE)

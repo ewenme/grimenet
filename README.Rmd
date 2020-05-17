@@ -15,10 +15,6 @@ knitr::opts_chunk$set(
 
 # grimenet
 
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-<!-- badges: end -->
-
 ![grimenet](man/figures/screenshot.png)
 
 *GRIMENET* is an app for exploring the social networks within [UK Grime](https://en.wikipedia.org/wiki/Grime_(music_genre)) through interactive network analysis.
@@ -38,3 +34,7 @@ grimenet::run_app() # run!
 ## Credits
 
 This work is heavily inspired by Karl Tryggvason's [Discogsgrapher](https://github.com/Kalli/Discogsgrapher) project.
+
+## License
+
+[MIT](https://github.com/ewenme/grimenet/blob/master/LICENSE)
