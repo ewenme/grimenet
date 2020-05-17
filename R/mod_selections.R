@@ -12,7 +12,7 @@ mod_selections_ui <- function(id){
   tagList(
     pickerInput(
       ns("artist"), label = paste("choose artist(s)", intToUtf8(0x0001F465)),
-      choices = artists$name, multiple = TRUE,
+      choices = grimenet::artists$name, multiple = TRUE,
       options = pickerOptions(
         liveSearch = TRUE,
         liveSearchNormalize = TRUE,
@@ -55,8 +55,8 @@ mod_selections_server <- function(input, output, session, react_global){
   
   # get selected artist meta
   observeEvent(input$artist, {
-    react_global$artist_id <- artists$node_id[artists$name %in% input$artist]
-    react_global$artist_name <- artists$name[artists$name %in% input$artist]
+    react_global$artist_id <- grimenet::artists$node_id[grimenet::artists$name %in% input$artist]
+    react_global$artist_name <- grimenet::artists$name[grimenet::artists$name %in% input$artist]
   })
   
   # update year range
