@@ -1,4 +1,4 @@
-#' @import dplyr glue purrr shiny shinyWidgets tidygraph visNetwork waiter
+#' @import dplyr glue purrr shiny shinyjs shinyWidgets tidygraph visNetwork waiter
 #' @keywords internal
 "_PACKAGE"
 

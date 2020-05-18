@@ -10,6 +10,7 @@ Imports:
     dplyr (>= 0.8.0),
     glue (>= 1.4.0),
     purrr (>= 0.3.4),
+    shinyjs,
     shinyWidgets (>= 0.5.1),
     tidygraph (>= 1.2.0),
     visNetwork (>= 2.0.9),

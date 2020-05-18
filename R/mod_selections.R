@@ -10,40 +10,43 @@
 mod_selections_ui <- function(id){
   ns <- NS(id)
   tagList(
-    pickerInput(
-      ns("artist"), label = paste("choose artist(s)", intToUtf8(0x0001F465)),
-      choices = setNames(grimenet::artists$artist_id, grimenet::artists$name_clean), 
-      multiple = TRUE,
-      options = pickerOptions(
-        liveSearch = TRUE,
-        liveSearchNormalize = TRUE,
-        liveSearchPlaceholder = "search for an artist...",
-        maxOptions = 5,
-        size = 10
+    absolutePanel(
+      top = 100, left = 10,
+      pickerInput(
+        ns("artist"), label = paste("choose artist(s)", intToUtf8(0x0001F465)),
+        choices = setNames(grimenet::artists$artist_id, grimenet::artists$name_clean), 
+        multiple = TRUE,
+        options = pickerOptions(
+          liveSearch = TRUE,
+          liveSearchNormalize = TRUE,
+          liveSearchPlaceholder = "search for an artist...",
+          maxOptions = 5,
+          size = 10
         )
       ),
-    conditionalPanel(
-      condition = paste0("input['", ns("artist"), "'] != '' "),
-      chooseSliderSkin("Modern", color = "LightSlateGrey"),
-      uiOutput(ns("get_year")),
-      awesomeCheckboxGroup(
-        ns("role"), label = paste("collaboration type", intToUtf8(0x0001F91D)), status = "info",
-        choices = c(`feature/vocals`="feat|vocal", production="prod"),
-        selected = c(`feature/vocals`="feat|vocal", production="prod"), 
-        inline = TRUE
-      ),
-      pickerInput(
-        ns("layout"), label = paste("play with the layout", intToUtf8(0x0001F4D0)),
-        choices = c(
-          star = "layout_as_star", tree = "layout_as_tree", 
-          circle = "layout_in_circle", nicely = "layout_nicely", grid = "layout_on_grid", 
-          sphere = "layout_on_sphere", randomly = "layout_randomly", dh = "layout_with_dh", 
-          fr = "layout_with_fr", gem = "layout_with_gem", graphopt = "layout_with_graphopt", 
-          kk = "layout_with_kk", lgl = "layout_with_lgl", mds = "layout_with_mds", 
-          sugiyama = "layout_with_sugiyama"
-        ), selected = "layout_nicely"
-      ),
-      actionButton(ns("reset"), label = "clear selections")
+      conditionalPanel(
+        condition = paste0("input['", ns("artist"), "'] != '' "),
+        chooseSliderSkin("Modern", color = "LightSlateGrey"),
+        uiOutput(ns("get_year")),
+        awesomeCheckboxGroup(
+          ns("role"), label = paste("collaboration type", intToUtf8(0x0001F91D)), status = "info",
+          choices = c(`feature/vocals`="feat|vocal", production="prod"),
+          selected = c(`feature/vocals`="feat|vocal", production="prod"), 
+          inline = TRUE
+        ),
+        pickerInput(
+          ns("layout"), label = paste("play with the layout", intToUtf8(0x0001F4D0)),
+          choices = c(
+            star = "layout_as_star", tree = "layout_as_tree", 
+            circle = "layout_in_circle", nicely = "layout_nicely", grid = "layout_on_grid", 
+            sphere = "layout_on_sphere", randomly = "layout_randomly", dh = "layout_with_dh", 
+            fr = "layout_with_fr", gem = "layout_with_gem", graphopt = "layout_with_graphopt", 
+            kk = "layout_with_kk", lgl = "layout_with_lgl", mds = "layout_with_mds", 
+            sugiyama = "layout_with_sugiyama"
+          ), selected = "layout_nicely"
+        ),
+        actionButton(ns("reset"), label = "clear selections")
+      )
     )
   )
 }

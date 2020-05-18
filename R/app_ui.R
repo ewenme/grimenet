@@ -9,20 +9,11 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     fillPage(
       setBackgroundColor(color = "#F5F5F5"),
-      absolutePanel(
-        top = 10, left = 10, 
-        tags$h1("grimeNet")
-      ),
-      absolutePanel(
-        top = 100, left = 10, draggable = TRUE, width = "20%", 
-        style = "z-index:500; min-width: 250px;",
-        mod_selections_ui("selections_ui_1")
-      ),
+      padding = 20,
+      mod_header_ui("header_ui_1"),
+      mod_selections_ui("selections_ui_1"),
       mod_network_ui("network_ui_1"),
-      absolutePanel(
-        top = 10, right = 10,
-        mod_about_ui("about_ui_1")
-      ),
+      mod_about_ui("about_ui_1"),
       waiter_show_on_load(html = spin_wobblebar(), color = "#F5F5F5")
     )
   )

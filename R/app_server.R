@@ -15,6 +15,10 @@ app_server <- function(input, output, session) {
     layout = "layout_nicely"
   )
   
+  observeEvent(input$toggle_selections, {
+    toggle('selections')
+  })
+  
   callModule(mod_about_server, "about_ui_1")
   callModule(mod_selections_server, "selections_ui_1", react_global)
   callModule(mod_network_server, "network_ui_1", react_global)

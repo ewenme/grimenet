@@ -10,7 +10,11 @@
 mod_about_ui <- function(id){
   ns <- NS(id)
   tagList(
-    circleButton(ns("about"), icon = icon("question-circle"), size = "xs")
+    fixedPanel(
+      top = 10, right = 10,
+      circleButton(ns("about"), icon = icon("question-circle"), 
+                   size = "sm")
+    )
   )
 }
     
