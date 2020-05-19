@@ -111,8 +111,8 @@ mod_network_server <- function(input, output, session, react_global){
         ) %>% 
       visEdges(
         color = list(
-          color = "LightSlateGrey",
-          highlight = "#fff",
+          color = "#b2bec3",
+          highlight = "#636e72",
           opacity = 0.6
         ) 
       )

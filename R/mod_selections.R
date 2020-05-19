@@ -33,7 +33,7 @@ mod_selections_ui <- function(id){
       ),
       conditionalPanel(
         condition = paste0("input['", ns("artist"), "'] != '' "),
-        chooseSliderSkin("Modern", color = "LightSlateGrey"),
+        chooseSliderSkin("Modern", color = "#a662e3"),
         uiOutput(ns("get_year")),
         awesomeCheckboxGroup(
           ns("role"), label = paste("collaboration type", intToUtf8(0x0001F91D)), status = "info",
@@ -52,7 +52,8 @@ mod_selections_ui <- function(id){
             sugiyama = "layout_with_sugiyama"
           ), selected = "layout_nicely"
         ),
-        actionButton(ns("reset"), label = "clear selections")
+        actionButton(ns("reset"), label = "clear selections",
+                     style="opacity: .80; color: #fff; background-color: #a662e3; border-color: #a153e5")
       )
     )
   )
