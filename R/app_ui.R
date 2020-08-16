@@ -6,14 +6,20 @@
 #' @noRd
 app_ui <- function(request) {
   tagList(
-    golem_add_external_resources(),
-    fillPage(
+    fluidPage(
+      golem_add_external_resources(),
       setBackgroundColor(color = "#F5F5F5"),
-      padding = 20,
       mod_header_ui("header_ui_1"),
-      mod_network_ui("network_ui_1"),
-      mod_selections_ui("selections_ui_1"),
       mod_about_ui("about_ui_1"),
+      sidebarLayout(
+        sidebarPanel(
+          width = 3,
+          mod_selections_ui("selections_ui_1"),
+        ),
+        mainPanel(
+          mod_network_ui("network_ui_1"),
+        )
+      ),
       waiter_show_on_load(html = spin_wobblebar(), color = "#F5F5F5")
     )
   )
@@ -34,7 +40,7 @@ golem_add_external_resources <- function(){
  
   tags$head(
     favicon(),
-    waiter::use_waiter(include_js = FALSE),
+    waiter::use_waiter(),
     useShinyjs(),
     bundle_resources(
       path = app_sys('app/www'),

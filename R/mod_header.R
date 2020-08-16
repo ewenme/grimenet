@@ -10,10 +10,7 @@
 mod_header_ui <- function(id){
   ns <- NS(id)
   tagList(
-    fixedPanel(
-      top = 10, left = 10,
-      tags$h1("grimeNet")
-    )
+    titlePanel("grimeNet")
   )
 }
     

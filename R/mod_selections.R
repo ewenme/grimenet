@@ -10,15 +10,6 @@
 mod_selections_ui <- function(id){
   ns <- NS(id)
   tagList(
-    fixedPanel(
-      top = 100, left = 10,
-      actionButton(
-        ns('toggle_selections'), label = 'Hide panel',
-        style="opacity: .80; color: #fff; background-color: #a662e3; border-color: #a153e5"
-        )
-    ),
-    absolutePanel(
-      id = ns("selections"), top = 150, left = 10,
       pickerInput(
         ns("artist"), label = paste("choose artist(s)", intToUtf8(0x0001F465)),
         choices = setNames(grimenet::artists$artist_id, grimenet::artists$name_clean), 
@@ -56,7 +47,6 @@ mod_selections_ui <- function(id){
                      style="opacity: .80; color: #fff; background-color: #a662e3; border-color: #a153e5")
       )
     )
-  )
 }
     
 #' selections Server Function
