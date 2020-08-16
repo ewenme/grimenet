@@ -83,7 +83,7 @@ mod_network_server <- function(input, output, session, react_global){
         padding: 5px;
         white-space: normal;
         
-        font-family: 'Pangolin', cursive;
+        font-family: 'Recursive', monospace;
         font-size: 14px;
         color: #000000;
         background-color: #f5f4ed;
@@ -103,7 +103,7 @@ mod_network_server <- function(input, output, session, react_global){
           border = "#000"
           ),
         font = list(
-          color = "#fff", size = 24, face = "Pangolin",
+          color = "#fff", size = 24, face = "Recursive",
           strokeWidth = 5, strokeColor = "#000"
         )
         ) %>% 
