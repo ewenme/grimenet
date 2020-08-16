@@ -10,7 +10,7 @@
 mod_network_ui <- function(id){
   ns <- NS(id)
   tagList(
-    visNetworkOutput(ns("network"), width = "100%", height = "100%")
+    visNetworkOutput(ns("network"), width = "100%", height = "100vh")
   )
 }
     
@@ -78,15 +78,14 @@ mod_network_server <- function(input, output, session, react_global){
         hideEdgesOnDrag = TRUE, 
         hoverConnectedEdges = FALSE,
         tooltipStyle = "
-        position: absolute;
+        position: fixed;
         visibility: hidden;
-
         padding: 5px;
         white-space: normal;
         
         font-family: 'Pangolin', cursive;
-        font-size:14px;
-        color:#000000;
+        font-size: 14px;
+        color: #000000;
         background-color: #f5f4ed;
         
         -moz-border-radius: 3px;
@@ -94,7 +93,6 @@ mod_network_server <- function(input, output, session, react_global){
         border-radius: 3px;
         border: 1px solid #808074;
         
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
         "
         ) %>% 
       visNodes(

@@ -17,6 +17,7 @@ app_ui <- function(request) {
           mod_selections_ui("selections_ui_1"),
         ),
         mainPanel(
+          width = 9,
           mod_network_ui("network_ui_1"),
         )
       ),
