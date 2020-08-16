@@ -10,7 +10,7 @@
 mod_network_ui <- function(id){
   ns <- NS(id)
   tagList(
-    visNetworkOutput(ns("network"), width = "100%", height = "100vh")
+    visNetworkOutput(ns("network"), width = "100%", height = "95vh")
   )
 }
     
@@ -68,6 +68,8 @@ mod_network_server <- function(input, output, session, react_global){
   
   # plot visNetwork
   output$network <- renderVisNetwork({
+    
+    if (is.null(react_global$artist_id)) return(NULL)
     
     visNetwork(network_data()$nodes, network_data()$edges) %>% 
       visIgraphLayout(

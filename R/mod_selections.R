@@ -12,7 +12,7 @@ mod_selections_ui <- function(id){
   tagList(
       pickerInput(
         ns("artist"), label = paste("choose artist(s)", intToUtf8(0x0001F465)),
-        choices = setNames(grimenet::artists$artist_id, grimenet::artists$name_clean), 
+        choices = setNames(grimenet::artists$artist_id, grimenet::artists$name_clean),
         multiple = TRUE,
         options = pickerOptions(
           liveSearch = TRUE,
@@ -130,6 +130,8 @@ mod_selections_server <- function(input, output, session, react_global){
   
   # reset inputs
   observeEvent(input$reset, {
+    
+    react_global$artist_id <- NULL
     updatePickerInput(session, "artist", selected = "")
     updateAwesomeCheckboxGroup(
       session, "role",
