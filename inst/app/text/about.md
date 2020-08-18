@@ -10,7 +10,7 @@ Source: [Scenius, or Communal Genius](https://kk.org/thetechnium/scenius-or-comm
 
 ### links
 
-Made by [@ewen_](https://twitter.com/ewen_)
+Author: [@ewen_](https://twitter.com/ewen_)
 
 Data: [github.com/ewenme/grime-archives](https://github.com/ewenme/grime-archives)
 

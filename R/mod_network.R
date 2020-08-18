@@ -77,7 +77,9 @@ mod_network_server <- function(input, output, session, react_global){
         ) %>% 
       visPhysics(solver = "repulsion") %>% 
       visInteraction(
-        hideEdgesOnDrag = TRUE, 
+        dragNodes = TRUE, 
+        dragView = FALSE, 
+        zoomView = TRUE,
         hoverConnectedEdges = FALSE,
         tooltipStyle = "
         position: fixed;
